@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import data from "../data/data.json";
 
 const initialState = {
-  data: [],
+  data: data,
 };
 
 const RaffleSlider = createSlice({

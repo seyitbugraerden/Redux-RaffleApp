@@ -1,4 +1,4 @@
-import PanelArea from "./components/panel/panel";
+import PanelArea from "./components/panel/panelArea";
 import "./App.css";
 
 function App() {
