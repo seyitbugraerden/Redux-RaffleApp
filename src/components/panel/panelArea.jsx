@@ -18,30 +18,28 @@ function panelArea() {
         header="Generated Element"
         visible={visible}
         style={{
-          textAlign: "center",
+          width: "20vw",
+          textAlign: "start",
         }}
       >
         <div>{selected} </div>
-        <button
+        <Button
+          icon="bi bi-x-circle"
           style={{ marginTop: "20px" }}
-          className="text-light"
+          className="text-light close_button"
           onClick={() => {
             setVisible(false);
           }}
-        >
-          Close
-        </button>
+        ></Button>
       </Dialog>
       <Panel header="Raffle List" className="panel_area">
         <Button
-          label="Generate"
-          icon="pi pi-external-link"
+          icon="bi bi-lightning-fill"
           onClick={() => {
             dispatch(randomItem());
             setVisible(true);
           }}
         />
-
         {name.map((item) => (
           <div key={item.id}>
             <p>
@@ -55,6 +53,19 @@ function panelArea() {
             </p>
           </div>
         ))}
+        <Button
+          style={{
+            scale: ".7",
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+          }}
+          icon="bi bi-plus"
+          onClick={() => {
+            dispatch(randomItem());
+            setVisible(true);
+          }}
+        />
       </Panel>
     </>
   );

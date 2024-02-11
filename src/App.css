@@ -47,6 +47,8 @@
 .fade-out{animation: fade-out 500ms;}
 .p-dialog-header-icons{display: none;}
 .text-light{color: white;}
+.p-panel{position: relative;}
+.close_button{position: absolute;right: 10px;top: 0px;scale: .8;}
 @keyframes fade-in{
   0%{
     opacity: 0;
