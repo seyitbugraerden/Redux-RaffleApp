@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { Panel } from "primereact/panel";
+import { InputText } from "primereact/inputtext";
 import { randomItem } from "../Slice/RaffleAppSlice";
+import { editItem } from "../Slice/RaffleAppSlice";
+import { addItem } from "../Slice/RaffleAppSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTheItem } from "../Slice/RaffleAppSlice";
 
@@ -11,6 +14,7 @@ function panelArea() {
   const [show, setShow] = useState(false);
   const name = useSelector((state) => state.raffle.data);
   const selected = useSelector((state) => state.raffle.selectedItem);
+  const newItem = useSelector((state) => state.raffle.newItem);
 
   const dispatch = useDispatch();
   return (
@@ -25,7 +29,7 @@ function panelArea() {
       >
         <div>{selected} </div>
         <Button
-          icon="bi bi-x-circle"
+          icon="bi bi-x"
           style={{ marginTop: "20px" }}
           className="text-light close_button"
           onClick={() => {
@@ -74,7 +78,34 @@ function panelArea() {
           width: "20vw",
           textAlign: "start",
         }}
-      ></Dialog>
+      >
+        <Button
+          style={{
+            scale: ".7",
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+          }}
+          icon="bi bi-x"
+          onClick={() => {
+            setShow(false);
+          }}
+        />
+        <InputText
+          placeholder="Add New Element"
+          value={newItem}
+          onChange={(e) => {
+            dispatch(editItem(e.target.value));
+          }}
+        />
+        <Button
+          label="Add"
+          style={{ float: "right" }}
+          onClick={() => {
+            dispatch(addItem());
+          }}
+        />
+      </Dialog>
     </>
   );
 }

@@ -4,6 +4,7 @@ import data from "../data/data.json";
 const initialState = {
   data: data,
   selectedItem: "",
+  newItem: "lorem",
 };
 
 const RaffleSlider = createSlice({
@@ -18,8 +19,18 @@ const RaffleSlider = createSlice({
       const random = Math.floor(Math.random() * state.data.length);
       state.selectedItem = state.data[random].name;
     },
+    editItem: (state, action) => {
+      state.newItem = action.payload;
+    },
+    addItem: (state) => {
+      state.data.push({
+        name: state.newItem,
+        id: state.data.length + 1,
+      });
+    },
   },
 });
 
-export const { deleteTheItem, randomItem } = RaffleSlider.actions;
+export const { deleteTheItem, randomItem, editItem, addItem } =
+  RaffleSlider.actions;
 export default RaffleSlider.reducer;
