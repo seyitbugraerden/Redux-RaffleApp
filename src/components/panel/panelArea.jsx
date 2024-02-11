@@ -9,7 +9,9 @@ function panelArea() {
       <Panel header="Raffle Element" className="panel_area">
         {name.map((item) => (
           <div key={item.id}>
-            <p>{item.name}</p>
+            <p>
+              {item.name} <i class="bi bi-archive"></i>
+            </p>
           </div>
         ))}
       </Panel>
