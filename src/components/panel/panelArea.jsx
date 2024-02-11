@@ -9,15 +9,21 @@ import { deleteTheItem } from "../Slice/RaffleAppSlice";
 function panelArea() {
   const [visible, setVisible] = useState(false);
   const name = useSelector((state) => state.raffle.data);
+  const selected = useSelector((state) => state.raffle.selectedItem);
+
   const dispatch = useDispatch();
   return (
     <>
       <Dialog
         header="Generated Element"
         visible={visible}
-        style={{ width: "30vw" }}
+        style={{
+          textAlign: "center",
+        }}
       >
+        <div>{selected} </div>
         <button
+          style={{ marginTop: "20px" }}
           className="text-light"
           onClick={() => {
             setVisible(false);

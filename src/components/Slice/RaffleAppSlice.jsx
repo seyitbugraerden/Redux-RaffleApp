@@ -3,6 +3,7 @@ import data from "../data/data.json";
 
 const initialState = {
   data: data,
+  selectedItem: "",
 };
 
 const RaffleSlider = createSlice({
@@ -15,7 +16,7 @@ const RaffleSlider = createSlice({
     },
     randomItem: (state) => {
       const random = Math.floor(Math.random() * state.data.length);
-      console.log(state.data[random].name);
+      state.selectedItem = state.data[random].name;
     },
   },
 });
