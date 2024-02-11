@@ -6,9 +6,11 @@ function panelArea() {
   const name = useSelector((state) => state.raffle.data);
   return (
     <>
-      <Panel header="Raffle Element">
+      <Panel header="Raffle Element" className="panel_area">
         {name.map((item) => (
-          <p key={item.id}>{item.name}</p>
+          <div key={item.id}>
+            <p>{item.name}</p>
+          </div>
         ))}
       </Panel>
     </>
