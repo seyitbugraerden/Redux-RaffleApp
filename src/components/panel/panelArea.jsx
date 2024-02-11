@@ -103,6 +103,7 @@ function panelArea() {
           style={{ float: "right" }}
           onClick={() => {
             dispatch(addItem());
+            setShow(false);
           }}
         />
       </Dialog>
