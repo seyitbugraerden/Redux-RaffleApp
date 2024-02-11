@@ -46,6 +46,7 @@
 .panel_area p i{background-color: #59B4C3;color: white;padding: 5px;font-size: 10px;cursor: pointer;}
 .fade-out{animation: fade-out 500ms;}
 .p-dialog-header-icons{display: none;}
+.text-light{color: white;}
 @keyframes fade-in{
   0%{
     opacity: 0;

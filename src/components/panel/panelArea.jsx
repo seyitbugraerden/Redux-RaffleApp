@@ -18,17 +18,24 @@ function panelArea() {
         style={{ width: "30vw" }}
       >
         <button
+          className="text-light"
           onClick={() => {
-            dispatch(randomItem());
+            setVisible(false);
           }}
-        ></button>
+        >
+          Close
+        </button>
       </Dialog>
       <Panel header="Raffle List" className="panel_area">
         <Button
           label="Generate"
           icon="pi pi-external-link"
-          onClick={() => setVisible(true)}
+          onClick={() => {
+            dispatch(randomItem());
+            setVisible(true);
+          }}
         />
+
         {name.map((item) => (
           <div key={item.id}>
             <p>
