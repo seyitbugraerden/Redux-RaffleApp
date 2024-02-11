@@ -8,6 +8,7 @@ import { deleteTheItem } from "../Slice/RaffleAppSlice";
 
 function panelArea() {
   const [visible, setVisible] = useState(false);
+  const [show, setShow] = useState(false);
   const name = useSelector((state) => state.raffle.data);
   const selected = useSelector((state) => state.raffle.selectedItem);
 
@@ -62,11 +63,18 @@ function panelArea() {
           }}
           icon="bi bi-plus"
           onClick={() => {
-            dispatch(randomItem());
-            setVisible(true);
+            setShow(true);
           }}
         />
       </Panel>
+      <Dialog
+        header="Add New Element"
+        visible={show}
+        style={{
+          width: "20vw",
+          textAlign: "start",
+        }}
+      ></Dialog>
     </>
   );
 }
