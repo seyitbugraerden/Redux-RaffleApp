@@ -41,4 +41,24 @@
   color: #888;
 }
 
-.panel_area{min-width: 300px;}
+.panel_area{min-width: 300px;animation: fade-in 1s;}
+.panel_area p{display: flex;justify-content: space-between;margin: 20px 0;animation: fade-in 1.5s;}
+.panel_area p i{background-color: #59B4C3;color: white;padding: 5px;font-size: 10px;cursor: pointer;}
+.fade-out{animation: fade-out 500ms;}
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fade-out{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none !important;
+  }
+}

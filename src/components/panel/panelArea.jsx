@@ -6,11 +6,12 @@ function panelArea() {
   const name = useSelector((state) => state.raffle.data);
   return (
     <>
-      <Panel header="Raffle Element" className="panel_area">
+      <Panel header="Raffle List" className="panel_area">
         {name.map((item) => (
           <div key={item.id}>
             <p>
-              {item.name} <i class="bi bi-archive"></i>
+              {item.name}
+              <i className="bi bi-archive"></i>
             </p>
           </div>
         ))}
