@@ -5,45 +5,10 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .panel_area{min-width: 300px;animation: fade-in 1s;}
-.panel_area p{display: flex;justify-content: space-between;margin: 20px 0;animation: fade-in 1.5s;}
-.panel_area p i{background-color: #59B4C3;color: white;padding: 5px;font-size: 10px;cursor: pointer;}
+.panel_area p{display: flex;justify-content: space-between;margin: 20px 0;animation: fade-in 1.5s;align-items: center;}
+.panel_area p i{background-color: #6BD9CF;color: black;padding:10px;font-size: 10px;cursor: pointer;}
+button{background-color: #6BD9CF !important;color: black;outline: 0;border: 0;}
 .fade-out{animation: fade-out 500ms;}
 .p-dialog-header-icons{display: none;}
 .text-light{color: white;}
