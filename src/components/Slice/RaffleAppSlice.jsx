@@ -23,10 +23,13 @@ const RaffleSlider = createSlice({
       state.newItem = action.payload;
     },
     addItem: (state) => {
-      state.data.push({
-        name: state.newItem,
-        id: state.data.length + 1,
-      });
+      if (state.newItem !== "") {
+        state.data.push({
+          name: state.newItem,
+          id: state.data.length + 1,
+        });
+      }
+      state.newItem = "";
     },
   },
 });
