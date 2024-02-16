@@ -1,4 +1,4 @@
-<h2>React RaffleApp</h2>
+<h2>Redux RaffleApp</h2>
 
 <p>You can delete & add new Raffle Elements.</p>
 <p>You can conduct a draw through this application.</p>
